@@ -17,9 +17,6 @@
             </figure>
         {{/if}}
         <div class="gh-card-wrapper">
-            {{#get 'tags' limit='all'}}
-                <p class="gh-card-tag">{{tags.[1].name}}</p>
-            {{/get}}
             <h3 class="gh-card-title is-title">{{title}}</h3>
             {{#if excerpt}}
                 <p class="gh-card-excerpt is-body">{{excerpt}}</p>
@@ -32,6 +29,10 @@
                     <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
                 {{/if}}<!--
          --></footer>
+
+            {{#get 'tags' limit='all'}}
+                <p class="gh-card-tag">View on {{tags.[1].name}} &rarr;</p>
+            {{/get}}
         </div>
     </a>
 </article>
