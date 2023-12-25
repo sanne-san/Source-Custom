@@ -17,7 +17,9 @@
             </figure>
         {{/if}}
         <div class="gh-card-wrapper">
-            <p class="gh-card-tag">{{tags.[1].name}}</p>
+            {{#get 'tags' limit='all'}}
+                <p class="gh-card-tag">{{tags.[1].name}}</p>
+            {{/get}}
             <h3 class="gh-card-title is-title">{{title}}</h3>
             {{#if excerpt}}
                 <p class="gh-card-excerpt is-body">{{excerpt}}</p>
