@@ -29,10 +29,7 @@
                     <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
                 {{/if}}<!--
          --></footer>
-
-            {{#get 'tags' limit='all'}}
-                <p class="gh-card-tag">View on {{tags.[1].name}} &rarr;</p>
-            {{/get}}
+            <p class="gh-card-tag">{{tags.[1].name}} &rarr;</p>
         </div>
     </a>
 </article>
