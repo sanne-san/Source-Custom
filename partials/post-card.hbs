@@ -29,7 +29,10 @@
                     <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
                 {{/if}}<!--
          --></footer>
-            <p class="gh-card-tag">{{tags.[1].name}} &rarr;</p>
+            <p class="gh-card-tag">
+                <span>{{tags.feature_image}}</span>
+                {{tags.[1].name}} &rarr;
+            </p>
         </div>
     </a>
 </article>
