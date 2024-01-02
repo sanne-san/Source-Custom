@@ -1,4 +1,4 @@
-<article class="gh-card {{post_class}}{{#unless @custom.show_images_in_feed}} no-image{{/unless}}">
+<article class="gh-card {{post_class}}{{#unless @custom.show_images_in_feed}} no-image{{/unless}}" {{#foreach tags visibility="internal"}}style="background:{{accent_color}}{{/foreach}}">
     <a class="gh-card-link" href="{{#if canonical_url}}{{canonical_url}}{{else}}{{url}}{{/if}}" {{#if canonical_url}}target="_blank" rel="noopener"{{/if}}>
         {{#if feature_image}}
             <figure class="gh-card-image">
