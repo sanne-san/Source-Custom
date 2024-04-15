@@ -24,7 +24,7 @@
                         {{#if @custom.show_featured_posts}}
                             {{#match posts.length ">=" 4}}
                                 {{#get "posts" include="tags,authors" limit="16"}}
-                                    {{#foreach posts from="5" limit="12"}}
+                                    {{#foreach posts from="5" limit="24"}}
                                         {{> "post-card" lazyLoad=true}}
                                     {{/foreach}}
                                 {{/get}}
@@ -32,7 +32,7 @@
                         {{else}}
                             {{#match posts.length ">=" 10}}
                                 {{#get "posts" include="tags,authors" limit="22"}}
-                                    {{#foreach posts from="11" limit="12"}}
+                                    {{#foreach posts from="11" limit="24"}}
                                         {{> "post-card" lazyLoad=true}}
                                     {{/foreach}}
                                 {{/get}}
@@ -41,13 +41,13 @@
                     {{else match @custom.header_style "Magazine"}}
                         {{#match posts.length ">=" 7}}
                             {{#get "posts" include="tags,authors" limit="19"}}
-                                {{#foreach posts from="8" limit="12"}}
+                                {{#foreach posts from="8" limit="24"}}
                                     {{> "post-card" lazyLoad=true}}
                                 {{/foreach}}
                             {{/get}}
                         {{/match}}
                     {{else}}
-                        {{#get "posts" include="tags,authors" limit="20"}}
+                        {{#get "posts" include="tags,authors" limit="24"}}
                             {{#foreach posts}}
                                 {{> "post-card" lazyLoad=true}}
                             {{/foreach}}
