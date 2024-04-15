@@ -47,7 +47,7 @@
                             {{/get}}
                         {{/match}}
                     {{else}}
-                        {{#get "posts" include="tags,authors" limit="12"}}
+                        {{#get "posts" include="tags,authors" limit="24"}}
                             {{#foreach posts}}
                                 {{> "post-card" lazyLoad=true}}
                             {{/foreach}}
